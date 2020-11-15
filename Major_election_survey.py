@@ -35,7 +35,7 @@ def draw_chart(df):
     # ax.set_xlabel('候選人', fontproperties=fontProperties)
     # ax.set_xticks(list(range(df['投給候選人'].nunique())))
     # ax.set_xticklabels(df['投給候選人'].unique()) #, fontproperties=fontProperties)
-    ax.set_xticklabels([i for i in range(df['投給候選人'].nunique())) #, fontproperties=fontProperties)
+    ax.set_xticklabels([i for i in range(len(df['投給候選人'].unique()))) #, fontproperties=fontProperties)
     st.pyplot(ax.figure)
     
 def check_input():
