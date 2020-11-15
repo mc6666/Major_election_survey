@@ -26,13 +26,13 @@ def read_data():
     return df
     
 def draw_chart(df):
-    plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei'] 
+    # plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei'] 
     plt.rcParams['font.size'] = 14
     plt.rcParams['axes.unicode_minus'] = False
-    fontProperties = FontProperties(fname=r"c:\windows\fonts\msjh.ttc", size=14)
+    # fontProperties = FontProperties(fname=r"c:\windows\fonts\msjh.ttc", size=14)
     ax = sns.countplot(x='投給候選人', data=df)
     print(df['投給候選人'].unique(), list(range(df['投給候選人'].nunique())))
-    ax.set_xlabel('候選人', fontproperties=fontProperties)
+    # ax.set_xlabel('候選人', fontproperties=fontProperties)
     # ax.set_xticks(list(range(df['投給候選人'].nunique())))
     ax.set_xticklabels(df['投給候選人'].unique()) #, fontproperties=fontProperties)
     st.pyplot(ax.figure)
