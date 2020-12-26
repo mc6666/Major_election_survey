@@ -32,7 +32,7 @@ meal = st.multiselect(
     '時間',
      df['time'].unique())
 
-total_bill = st.slider('計程車費', df['total_bill'].min(), df['total_bill'].max(), df['total_bill'].mean()) 
+total_bill = st.slider('計程車費', df['total_bill'].min(), df['total_bill'].max(), float(df['total_bill'].mean())) 
   
 data = df.loc[(df['sex'].isin(sex)) & (df['day'].isin(wday)) & (df['time'].isin(meal)) & (df['total_bill']>=total_bill)]
 st.write("Total tips ", data.sort_index())  
